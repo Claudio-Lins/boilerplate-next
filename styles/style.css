@@ -1,0 +1,124 @@
+@tailwind base;
+
+@tailwind components;
+
+@layer components {
+  .header-link {
+    @apply flex items-center space-x-2 cursor-pointer;
+  }
+
+  .span {
+    @apply relative text-white sm:text-blue-600 uppercase text-sm font-medium before:bg-blue-600 before:rounded-bl before:-bottom-1.5 before:h-0.5 before:inset-x-0 before:absolute before:transform before:origin-center before:scale-x-0 before:transition-all before:duration-300 group-hover:before:scale-x-100;
+  }
+}
+
+.dropdownMenu {
+  @apply bg-white text-blue-600 w-[150px] -ml-5 normal-case rounded shadow-sm absolute top-[90px] list-none text-center flex flex-col justify-center transform;
+}
+
+.navItem {
+  @apply flex items-center text-sm py-5 font-bold tracking-wide sm:font-normal hover:border-b-2 hover:border-blue-600 p-2 mx-auto sm:text-blue-600 text-white;
+}
+
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.nav-menu {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+  height: 10vh;
+  top: 80px;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.nav-links:hover {
+  /* background-color: #1888ff; */
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+}
+
+.fa-bars {
+  color: rgb(0, 0, 0);
+}
+
+.nav-links-mobile {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.dropdown-menu li {
+  background: #1888ff;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background: #5cabff;
+}
+
+.dropdown-menu.clicked {
+  display: none;
+}
+
+.dropdown-link {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  padding: 16px;
+}
+
+@media screen and (max-width: 960px) {
+  .NavbarItems {
+    position: relative;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 100px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+
+  .nav-menu.active {
+    background: #000000f1;
+    left: 0;
+    top: 100px;
+    opacity: 1;
+    transition: all 0.3s ease;
+    z-index: 1;
+    /* height: 100%; */
+    padding-top: 0px;
+    padding-bottom: 80px;
+  }
+
+  .menu-icon {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    transform: translate(-100%, 50%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .fa-times {
+    color: rgb(5, 5, 5);
+    font-size: 2rem;
+  }
+  .fa-caret-down {
+    display: none;
+  }
+}
