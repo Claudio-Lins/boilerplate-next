@@ -4,10 +4,10 @@ import Image from "next/image";
 export default function Rede() {
   return (
     <>
-      <div className=" cursor-pointer">
+      <div className=" flex items-center mt-2 ml-4 cursor-pointer">
         <Link href="/" passHref>
           <Image
-            src="/Logos/lg-redesf-1280x427.png"
+            src="/logo/logoMarca.svg"
             alt="Rede Sem Fronteiras"
             width={256}
             height={85}

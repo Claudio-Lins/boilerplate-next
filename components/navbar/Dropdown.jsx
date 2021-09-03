@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { MenuItems } from "./MenuItems";
+import { DropItems } from "./DropItems";
 
 export default function Dropdown() {
   const [click, setClick] = useState(false);
@@ -13,7 +13,7 @@ export default function Dropdown() {
         onClick={handleClick}
         className={click ? "dropdownMenu hideem" : "dropdownMenu"}
       >
-        {MenuItems.map((item, index) => {
+        {DropItems.map((item, index) => {
           return (
             <div className="flex justify-center px-3 py-4 rounded shadow hover:bg-yellow-600 hover:text-white transition duration-500 ease-in-out" key={index}>
               <Link

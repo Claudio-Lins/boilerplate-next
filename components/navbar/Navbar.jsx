@@ -5,6 +5,7 @@ import Rede from "./logos/Rede";
 import IconDown from "../navbar/IconDown";
 import IconClose from "./IconClose";
 import IconBars from "./IconBars";
+import { MenuItems } from "./MenuItems";
 
 export default function Navbar() {
   const [click, setClick] = useState(false);
@@ -30,7 +31,6 @@ export default function Navbar() {
 
   return (
     <>
-      
       <nav className="bg-gray-50 border-b shadow flex sm:justify-evenly items-center h-[100px] sticky top-0 z-[1000]">
         <div className="flex items-center">
           <Rede />
@@ -40,26 +40,30 @@ export default function Navbar() {
         </div>
 
         <div className={click ? "nav-menu active" : "nav-menu"}>
-          <div className="header-link group">
-            <Link href="/">
-              <a onClick={closeMobileMenu}>
-                <span className="span">Home</span>
-              </a>
-            </Link>
-          </div>
+          {MenuItems.map((menu, index) => {
+            return (
+              <div className="header-link group" key={index}>
+                <Link href={menu.link}>
+                  <a onClick={closeMobileMenu}>
+                    <span className="span">{menu.title}</span>
+                  </a>
+                </Link>
+              </div>
+            );
+          })}
 
           <div className="header-link group">
             <div
-              className="flex items-center uppercase font-medium mx-auto text-sm text-white md:text-blue-600 z-10"
+              className="hidden sm:flex items-center uppercase font-medium mx-auto text-sm text-white md:text-blue-600 z-10"
               onMouseEnter={onMouseEnter}
               onMouseLeave={onMouseLeave}
             >
-              <Link href="/quem-somos">
+              <Link href="/">
                 <a
                   className="md:py-8 flex items-center"
                   onClick={closeMobileMenu}
                 >
-                  <span>Quem somos</span>
+                  <span>DropDown</span>
                   <span className="hidden sm:flex">
                     <IconDown />
                   </span>
@@ -67,46 +71,6 @@ export default function Navbar() {
               </Link>
               {dropdown && <Dropdown />}
             </div>
-          </div>
-
-          <div className="header-link group">
-            <Link href="#">
-              <a onClick={closeMobileMenu}>
-                <span className="span">Ações</span>
-              </a>
-            </Link>
-          </div>
-
-          <div className="header-link group">
-            <Link href="#">
-              <a onClick={closeMobileMenu}>
-                <span className="span">Notícias</span>
-              </a>
-            </Link>
-          </div>
-
-          <div className="header-link group">
-            <Link href="#">
-              <a onClick={closeMobileMenu}>
-                <span className="span">Campanhas</span>
-              </a>
-            </Link>
-          </div>
-
-          <div className="header-link group">
-            <Link href="/arquivos">
-              <a onClick={closeMobileMenu}>
-                <span className="span">Arquivo</span>
-              </a>
-            </Link>
-          </div>
-
-          <div className="header-link group">
-            <Link href="/contact">
-              <a onClick={closeMobileMenu}>
-                <span className="span">Contacto</span>
-              </a>
-            </Link>
           </div>
         </div>
       </nav>
