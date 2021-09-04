@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Dropdown from "./Dropdown";
 import Link from "next/link";
-import Rede from "./logos/Rede";
+import LogoMarca from "./logos/LogoMarca";
 import IconDown from "../navbar/IconDown";
 import IconClose from "./IconClose";
 import IconBars from "./IconBars";
@@ -33,7 +33,7 @@ export default function Navbar() {
     <>
       <nav className="bg-gray-50 border-b shadow flex sm:justify-evenly items-center h-[100px] sticky top-0 z-[1000]">
         <div className="flex items-center">
-          <Rede />
+          <LogoMarca />
           <div className="menu-icon" onClick={handleClick}>
             {click ? <IconClose /> : <IconBars />}
           </div>
@@ -54,7 +54,7 @@ export default function Navbar() {
 
           <div className="header-link group">
             <div
-              className="hidden sm:flex items-center uppercase font-medium mx-auto text-sm text-white md:text-blue-600 z-10"
+              className="hidden sm:flex items-center uppercase font-medium mx-auto text-sm text-white md:text-purple-600 z-10"
               onMouseEnter={onMouseEnter}
               onMouseLeave={onMouseLeave}
             >
