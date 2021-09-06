@@ -25,8 +25,8 @@ export const MenuItems = [
     cName: "dropdown-link",
   },
   {
-    title: "Link 06",
-    link: "/link-06",
-    cName: "dropdown-link",
+    title: "Contact",
+    link: "/contact",
+    cName: "",
   },
 ];
