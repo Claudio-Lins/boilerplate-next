@@ -6,7 +6,7 @@ export default function ImputForm(props) {
         id={props.id}
         name={props.name}
         placeholder={props.placeholder}
-        className="border-0 peer h-10 w-full border-b border-gray-300 placeholder-transparent text-gray-900 focus:outline-none focus:border-pink-600"
+        className="border-0 peer h-10 w-full border-b border-gray-300 placeholder-transparent text-gray-900 focus:outline-none focus:border-pink-600 focus:ring-transparent"
       />
       <label
         htmlFor={props.htmlFor}

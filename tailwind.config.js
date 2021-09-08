@@ -29,5 +29,8 @@ module.exports = {
       backgroundColor: ["active"],
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require('@tailwindcss/forms'),
+  ],
 };
