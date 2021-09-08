@@ -10,6 +10,8 @@
   .span {
     @apply relative text-white sm:text-purple-600 uppercase text-sm font-medium before:bg-purple-600 before:rounded-bl before:-bottom-1.5 before:h-0.5 before:inset-x-0 before:absolute before:transform before:origin-center before:scale-x-0 before:transition-all before:duration-300 group-hover:before:scale-x-100;
   }
+
+  
 }
 
 .dropdownMenu {
@@ -121,4 +123,16 @@
   .fa-caret-down {
     display: none;
   }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
