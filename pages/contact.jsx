@@ -14,9 +14,71 @@ export default function Contact(props) {
 
           <div className="w-full flex justify-center items-center px-4">
             <form action="" className="mt-8">
-              <fieldset className="flex flex-wrap justify-between items-center border border-solid border-gray-200 p-4 rounded-md shadow">
-                <legend className="text-sm text-gray-400 font-light tracking-wider px-2">
+              <fieldset
+                id="dados-pessoais"
+                className="flex flex-wrap justify-between items-center border border-solid border-gray-200 p-4 rounded-md shadow"
+              >
+                <legend className="text-lg bg-white text-gray-400 font-light tracking-wider px-2">
                   Dados pessoais
+                </legend>
+                <div className="my-4 w-full lg:w-1/2 lg:px-2 relative">
+                  <ImputForm
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    field="First Name"
+                    placeholder="First Name"
+                    htmlFor="firstName"
+                  />
+                </div>
+                <div className="my-4 w-full lg:w-1/2 lg:px-2 relative">
+                  <ImputForm
+                    type="text"
+                    id="middleName"
+                    name="middleName"
+                    field="Middle Name"
+                    placeholder="Middle Name"
+                    htmlFor="middleName"
+                  />
+                </div>
+                <div className="my-4 w-full lg:w-1/2 lg:px-2 relative">
+                  <ImputForm
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    field="Last Name"
+                    placeholder="Last Name"
+                    htmlFor="lastName"
+                  />
+                </div>
+                <div className="my-4 w-full lg:w-1/2 lg:px-2 relative">
+                  <ImputForm
+                    type="email"
+                    id="email"
+                    name="email"
+                    field="Email"
+                    placeholder="Email"
+                    htmlFor="email"
+                  />
+                </div>
+                <div className="my-4 w-full lg:w-1/2 lg:px-2 relative ">
+                  <ImputForm
+                    className="appearance-none"
+                    type="number"
+                    id="phone"
+                    name="phone"
+                    field="Phone"
+                    placeholder="Phone"
+                    htmlFor="phone"
+                  />
+                </div>
+              </fieldset>
+              <fieldset
+                id="endereco"
+                className="flex flex-wrap justify-between items-center mt-8 border border-solid border-gray-200 p-4 rounded-md shadow"
+              >
+                <legend className="text-lg text-center bg-white text-gray-400 font-light tracking-wider px-2">
+                  Endereço
                 </legend>
                 <div className="my-4 w-full lg:w-1/2 lg:px-2 relative">
                   <ImputForm

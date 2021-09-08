@@ -34,7 +34,7 @@ export default function Navbar() {
       <nav className="bg-gray-50 border-b shadow flex sm:justify-evenly items-center h-[100px] sticky top-0 z-[1000]">
         <div className="flex items-center">
           <LogoMarca />
-          <div className="menu-icon" onClick={handleClick}>
+          <div className="menuIcon" onClick={handleClick}>
             {click ? <IconClose /> : <IconBars />}
           </div>
         </div>
@@ -54,17 +54,17 @@ export default function Navbar() {
 
           <div className="header-link group">
             <div
-              className="hidden sm:flex items-center uppercase font-medium mx-auto text-sm text-white md:text-purple-600 z-10"
+              className="hidden lg:flex items-center uppercase font-medium mx-auto text-sm text-white md:text-purple-600 z-10"
               onMouseEnter={onMouseEnter}
               onMouseLeave={onMouseLeave}
             >
-              <Link href="/">
+              <Link href="/" passHref>
                 <a
                   className="md:py-8 flex items-center"
                   onClick={closeMobileMenu}
                 >
                   <span>DropDown</span>
-                  <span className="hidden sm:flex">
+                  <span className="hidden md:flex">
                     <IconDown />
                   </span>
                 </a>

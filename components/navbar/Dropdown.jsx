@@ -11,7 +11,7 @@ export default function Dropdown() {
     <>
       <div
         onClick={handleClick}
-        className={click ? "dropdownMenu hideem" : "dropdownMenu"}
+        className={click ? "dropdownMenu hidden" : "dropdownMenu"}
       >
         {DropItems.map((item, index) => {
           return (
@@ -21,8 +21,8 @@ export default function Dropdown() {
             >
               <Link
                 className="dropdownMenu"
-                // className={item.cName}
                 href={item.path}
+                passHref
                 onClick={() => setClick(false)}
               >
                 <a>{item.title}</a>
