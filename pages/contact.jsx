@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ImputForm from "../components/form/InputForm";
+import SelectForm from "../components/form/SelectForm";
 
 export default function Contact(props) {
   return (
@@ -81,54 +82,10 @@ export default function Contact(props) {
                   Endereço
                 </legend>
                 <div className="my-4 w-full lg:w-1/2 lg:px-2 relative">
-                  <ImputForm
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    field="First Name"
-                    placeholder="First Name"
-                    htmlFor="firstName"
-                  />
-                </div>
-                <div className="my-4 w-full lg:w-1/2 lg:px-2 relative">
-                  <ImputForm
-                    type="text"
-                    id="middleName"
-                    name="middleName"
-                    field="Middle Name"
-                    placeholder="Middle Name"
-                    htmlFor="middleName"
-                  />
-                </div>
-                <div className="my-4 w-full lg:w-1/2 lg:px-2 relative">
-                  <ImputForm
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    field="Last Name"
-                    placeholder="Last Name"
-                    htmlFor="lastName"
-                  />
-                </div>
-                <div className="my-4 w-full lg:w-1/2 lg:px-2 relative">
-                  <ImputForm
-                    type="email"
-                    id="email"
-                    name="email"
-                    field="Email"
-                    placeholder="Email"
-                    htmlFor="email"
-                  />
-                </div>
-                <div className="my-4 w-full lg:w-1/2 lg:px-2 relative ">
-                  <ImputForm
-                    className="appearance-none"
-                    type="number"
-                    id="phone"
-                    name="phone"
-                    field="Phone"
-                    placeholder="Phone"
-                    htmlFor="phone"
+                  <SelectForm
+                    id="country"
+                    name="country"
+                    field="Select your country"
                   />
                 </div>
               </fieldset>
