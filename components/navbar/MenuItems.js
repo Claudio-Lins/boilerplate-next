@@ -1,27 +1,27 @@
 export const MenuItems = [
   {
     title: "Home",
-    link: "/",
+    link: "#linkOne",
     cName: "dropdown-link",
   },
   {
     title: "Link 02",
-    link: "/link-02",
+    link: "/#linkTwo",
     cName: "dropdown-link",
   },
   {
     title: "Link 03",
-    link: "/link-03",
+    link: "/#linkThree",
     cName: "dropdown-link",
   },
   {
     title: "Link 04",
-    link: "/link-04",
+    link: "/#linkFour",
     cName: "dropdown-link",
   },
   {
     title: "Link 05",
-    link: "/link-05",
+    link: "/#linkFive",
     cName: "dropdown-link",
   },
   {
