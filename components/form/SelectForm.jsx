@@ -11,7 +11,7 @@ export default function SelectForm(props) {
         <option value=""></option>
         {SelectItemsCountry.map((country, index) => {
             return (
-              <option value="" key={index}>{country.name}</option>
+              <option value={country.value} key={index}>{country.name}</option>
             );
           })}
       </select>
