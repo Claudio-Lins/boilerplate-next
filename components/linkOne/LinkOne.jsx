@@ -4,7 +4,9 @@ export default function LinkOne() {
       id="linkOne"
       className="w-full min-h-screen pt-[100px] bg-pink-600 flex justify-center items-center"
     >
-      <h1 className="text-3xl text-center text-white font-bold">LinkOne</h1>
+      <h1 className="text-3xl text-center text-white font-bold uppercase">
+        Home
+      </h1>
     </section>
   );
 }
