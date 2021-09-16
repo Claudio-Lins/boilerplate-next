@@ -17,7 +17,7 @@ export default function LinkOne() {
       className="w-full px-3 min-h-screen py-8 bg-[#1A5B47] bg-opacity-10 shadow-sm flex items-center"
     >
       <div className="container mx-auto">
-        <div className="flex w-full">
+        <div className="flex justify-between items-center w-full">
           <Titles title="Destaque" delay={0.2} />
           <Busca />
         </div>

@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 import LinkOne from "../components/linkOne/LinkOne";
 import LinkFive from "../components/linkFive/LinkFive";
 import LinkFour from "../components/linkFour/LinkFour";
