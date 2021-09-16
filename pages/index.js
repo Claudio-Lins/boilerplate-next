@@ -4,6 +4,7 @@ import LinkFive from "../components/linkFive/LinkFive";
 import LinkFour from "../components/linkFour/LinkFour";
 import LinkThree from "../components/linkThree/LinkThree";
 import LinkTwo from "../components/linkTwo/LinkTwo";
+import Contacto from "../components/contacto/Contacto";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <LinkThree />
         <LinkFour />
         <LinkFive />
+        <Contacto />
       </main>
     </div>
   );

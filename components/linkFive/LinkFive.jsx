@@ -1,10 +1,17 @@
+import Titles from "../assets/Titles";
+
 export default function LinkFive() {
   return (
     <section
       id="linkFive"
-      className="w-full min-h-screen pt-[100px] bg-red-600 flex justify-center items-center"
+      className="w-full px-3 h-auto pt-14 pb-28 bg-[#1A5B47] bg-opacity-10 shadow-sm flex items-center"
     >
-      <h1 className="text-3xl text-center text-white font-bold">LinkFive</h1>
+      <div className="container mx-auto">
+        <div className="w-full">
+          <Titles title="Quem somos" delay={0.2} />
+        </div>
+        <hr className="border-white" />
+      </div>
     </section>
   );
 }
