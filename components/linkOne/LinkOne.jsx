@@ -1,19 +1,29 @@
+import Button from "../Button";
+import Lupa from "../icons/Lupa";
 import Box from "./Box";
+import Busca from "./Busca";
 
 export default function LinkOne() {
   return (
     <section
       id="linkOne"
-      className="w-full px-3 sm:h-[700px] py-8 bg-pink-600  flex items-center"
+      className="w-full px-3 sm:h-[700px] py-8 bg-[#1A5B47] bg-opacity-10 shadow-sm flex items-center"
     >
       <div className="container mx-auto">
-        <h1 className=" text-white font-bold text-2xl text-center sm:text-5xl mb-2 sm:mb-4">Destaque</h1>
-        <hr />
+        <div className="flex justify-between items-center w-full">
+          <div className="font-bold text-2xl text-[#1A5B47] sm:text-5xl mb-2 sm:mb-4">
+            Destaque
+          </div>
+          <Busca />
+        </div>
+
+        <hr className="border-white" />
         <div className="flex flex-col sm:flex-row sm:justify-between">
           <Box title="Destaque #01" />
           <Box title="Destaque #02" />
           <Box title="Destaque #03" />
         </div>
+        <Button title="Todos" />
       </div>
     </section>
   );
