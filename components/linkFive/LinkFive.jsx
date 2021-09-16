@@ -1,6 +1,10 @@
 import Titles from "../assets/Titles";
+import { useScroll } from "../assets/useScroll";
+import { motion } from "framer-motion";
+import { scaleAnimationUp } from "../../utils/Animations";
 
 export default function LinkFive() {
+  const [element, controls] = useScroll();
   return (
     <section
       id="linkFive"
@@ -11,7 +15,13 @@ export default function LinkFive() {
           <Titles title="Quem somos" delay={0.2} />
         </div>
         <hr className="border-white" />
-        <div className="border border-[#1A5B47] rounded-xl p-4">
+        <motion.div
+          ref={element}
+          variants={scaleAnimationUp}
+          animate={controls}
+          transition={{ delay: 0.4, type: "tween" }}
+          className="border border-[#1A5B47] rounded-xl p-4"
+        >
           <div className="bg-[#1A5B47] rounded-xl px-4 py-6">
             <p className="text-center text-white text-sm tracking-wider leading-relaxed antialiased md:p-44 md:text-2xl">
               A Rádio Miúdos é a primeira rádio portuguesa que iniciou as
@@ -24,7 +34,7 @@ export default function LinkFive() {
               representação da Comissão Europeia em Portugal.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
