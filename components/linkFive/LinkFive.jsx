@@ -11,6 +11,20 @@ export default function LinkFive() {
           <Titles title="Quem somos" delay={0.2} />
         </div>
         <hr className="border-white" />
+        <div className="border border-[#1A5B47] rounded-xl p-4">
+          <div className="bg-[#1A5B47] rounded-xl px-4 py-6">
+            <p className="text-center text-white text-sm tracking-wider leading-relaxed antialiased md:p-44 md:text-2xl">
+              A Rádio Miúdos é a primeira rádio portuguesa que iniciou as
+              emissões experimentais em novembro de 2015. É uma rádio
+              exclusivamente on-line com emissão 24 horas/ 7 dias por semana.
+              <br />
+              <br />O projeto foi premiado pela fundação Calouste Gulbenkian, na
+              última edição do conscurso FAZ IDEIAS DE ORIGEM PORTUGUESA 2015,
+              um concurso de empreeddorismosocial na diáspora e pela
+              representação da Comissão Europeia em Portugal.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
