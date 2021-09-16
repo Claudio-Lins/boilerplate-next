@@ -1,7 +1,7 @@
 export const MenuItems = [
   {
     title: "Home",
-    link: "#linkOne",
+    link: "/#linkOne",
     cName: "dropdown-link",
   },
   {
