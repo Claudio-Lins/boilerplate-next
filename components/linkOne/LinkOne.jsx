@@ -12,7 +12,7 @@ export default function LinkOne() {
     >
       <div className="container mx-auto">
         <div className="flex justify-between items-center w-full">
-          <Titles title="Destaque" />
+          <Titles title="Destaque" delay={0.2} />
           <Busca />
         </div>
 
