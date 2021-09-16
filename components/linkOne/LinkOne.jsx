@@ -1,7 +1,13 @@
+import {
+  animationDown,
+  animationLeft,
+  animationRight,
+  animationUp,
+  scaleAnimationUp,
+} from "../../utils/Animations";
 import Button from "../assets/Button";
 import Titles from "../assets/Titles";
-import Lupa from "../icons/Lupa";
-import Box from "./Box";
+import BoxDestaque from "./BoxDestaque";
 import Busca from "./Busca";
 
 export default function LinkOne() {
@@ -11,18 +17,30 @@ export default function LinkOne() {
       className="w-full px-3 min-h-screen py-8 bg-[#1A5B47] bg-opacity-10 shadow-sm flex items-center"
     >
       <div className="container mx-auto">
-        <div className="flex justify-between items-center w-full">
+        <div className="flex w-full">
           <Titles title="Destaque" delay={0.2} />
           <Busca />
         </div>
 
         <hr className="border-white" />
         <div className="flex flex-col sm:flex-row sm:justify-between">
-          <Box title="Destaque #01" />
-          <Box title="Destaque #02" />
-          <Box title="Destaque #03" />
+          <BoxDestaque
+            title="Destaque #01"
+            delay={0.4}
+            variants={animationUp}
+          />
+          <BoxDestaque
+            title="Destaque #02"
+            delay={0.6}
+            variants={animationUp}
+          />
+          <BoxDestaque
+            title="Destaque #03"
+            delay={0.8}
+            variants={animationUp}
+          />
         </div>
-        <Button title="Todos" />
+        <Button title="Todos" delay={1} variants={scaleAnimationUp} />
       </div>
     </section>
   );
