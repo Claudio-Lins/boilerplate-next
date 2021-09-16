@@ -8,11 +8,11 @@ export default function LinkOne() {
   return (
     <section
       id="linkOne"
-      className="w-full px-3 sm:h-[700px] py-8 bg-[#1A5B47] bg-opacity-10 shadow-sm flex items-center"
+      className="w-full px-3 min-h-screen py-8 bg-[#1A5B47] bg-opacity-10 shadow-sm flex items-center"
     >
       <div className="container mx-auto">
         <div className="flex justify-between items-center w-full">
-          <Titles title='Destaque' />
+          <Titles title="Destaque" />
           <Busca />
         </div>
 
