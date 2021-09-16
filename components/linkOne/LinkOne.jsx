@@ -1,4 +1,5 @@
-import Button from "../Button";
+import Button from "../assets/Button";
+import Titles from "../assets/Titles";
 import Lupa from "../icons/Lupa";
 import Box from "./Box";
 import Busca from "./Busca";
@@ -11,9 +12,7 @@ export default function LinkOne() {
     >
       <div className="container mx-auto">
         <div className="flex justify-between items-center w-full">
-          <div className="font-bold text-2xl text-[#1A5B47] sm:text-5xl mb-2 sm:mb-4">
-            Destaque
-          </div>
+          <Titles title='Destaque' />
           <Busca />
         </div>
 
