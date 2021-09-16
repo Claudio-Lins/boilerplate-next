@@ -14,7 +14,7 @@ export default function LinkOne() {
   return (
     <section
       id="linkOne"
-      className="w-full px-3 min-h-screen py-8 bg-[#1A5B47] bg-opacity-10 shadow-sm flex items-center"
+      className="w-full px-3 h-auto pt-14 pb-28 bg-[#1A5B47] bg-opacity-10 shadow-sm flex items-center"
     >
       <div className="container mx-auto">
         <div className="flex justify-between items-center w-full">
