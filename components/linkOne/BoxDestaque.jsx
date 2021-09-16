@@ -1,15 +1,15 @@
 import { useScroll } from "../assets/useScroll";
 import { motion } from "framer-motion";
-import { animationLeft } from "../../utils/Animations";
+import { scaleAnimationUp } from "../../utils/Animations";
 
 export default function BoxDestaque(props) {
   const [element, controls] = useScroll();
   return (
     <motion.div
       ref={element}
-      variants={props.variants || animationLeft}
+      variants={scaleAnimationUp}
       animate={controls}
-      transition={{ delay: props.delay, type: "tween" }}
+      transition={{ delay: 0.4, type: "tween" }}
       className="sm:w-[370px] h-[450px] w-full my-4 rounded-md shadow bg-purple-500 flex justify-center items-center"
     >
       {props.title}
