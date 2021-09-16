@@ -38,7 +38,6 @@
 }
 
 @media screen and (max-width: 960px) {
-
   .nav-menu {
     flex-direction: column;
     align-items: center;
@@ -85,7 +84,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: rgb(18, 18, 88);
+  background-color: rgb(18, 88, 41);
 }
 
 html {
