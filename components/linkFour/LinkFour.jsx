@@ -4,7 +4,7 @@ export default function LinkFour() {
   return (
     <section
       id="linkFour"
-      className="w-full h-auto pt-14 pb-28 px-2 bg-white flex justify-center"
+      className="w-full h-auto pt-10 pb-28 px-2 bg-white flex justify-center"
     >
       <div className="container mx-auto">
         <div className="w-full">

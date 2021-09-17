@@ -8,7 +8,7 @@ export default function LinkOne() {
   return (
     <section
       id="linkOne"
-      className="w-full px-3 h-auto pt-14 pb-28 bg-[#1A5B47] bg-opacity-10 shadow-sm flex items-center"
+      className="w-full px-3 h-auto pt-10 pb-28 bg-[#1A5B47] bg-opacity-10 shadow-sm flex items-center"
     >
       <div className="container w-full mx-auto">
         <div className="flex justify-between items-center w-full">
@@ -17,7 +17,7 @@ export default function LinkOne() {
         </div>
 
         <hr className="border-white" />
-        <div className="flex flex-col w-full sm:flex-row sm:justify-between">
+        <div className="flex flex-col w-full sm:space-x-4 sm:flex-row sm:justify-between">
           <BoxDestaque title="Destaque #01" />
           <BoxDestaque title="Destaque #02" />
           <BoxDestaque title="Destaque #03" />
