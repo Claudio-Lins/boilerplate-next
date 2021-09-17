@@ -52,7 +52,7 @@ export default function Navbar() {
             );
           })}
 
-          <div className="header-link group">
+          {/* <div className="header-link group">
             <div
               className="hidden lg:flex items-center uppercase font-medium mx-auto text-sm text-white md:text-purple-600 z-10"
               onMouseEnter={onMouseEnter}
@@ -71,7 +71,7 @@ export default function Navbar() {
               </Link>
               {dropdown && <Dropdown />}
             </div>
-          </div>
+          </div> */}
         </div>
       </nav>
     </>
