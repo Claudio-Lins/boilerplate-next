@@ -5,7 +5,7 @@ export const animationLeft = {
 
 export const animationRight = {
   hidden: { x: 100, opacity: 0 },
-  show: { x: 0, opacity: 1 },
+  show: { x: 1, opacity: 1 },
 };
 
 export const animationUp = {
