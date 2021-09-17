@@ -1,5 +1,6 @@
 import Titles from "../assets/Titles";
-import { FiPhone, FiMapPin, FiAtSign } from "react-icons/fi";
+import InfoContacto from "./InfoContacto";
+import Formulario from "./Formulario";
 
 export default function Contacto() {
   return (
@@ -12,27 +13,9 @@ export default function Contacto() {
           <Titles title="Contacto" delay={0.2} />
         </div>
         <hr />
-        <div className="flex mt-10">
-          <div className="bg-purple-600 w-full p-8 rounded-2xl sm:w-[40%]">
-            <h2 className="text-center text-white text-2xl sm:text-left">
-              Informações de contacto
-            </h2>
-            <hr />
-            <div className="flex items-center mt-16 space-x-4">
-              <FiPhone className="text-white text-2xl font-extralight" />
-              <p className="text-white text-sm font-light">
-                +351 123 456 789 / +351 123 456 789 +351 123 456 789
-              </p>
-            </div>
-            <div className="flex items-center mt-8 space-x-4">
-              <FiAtSign className="text-white text-2xl font-extralight" />
-              <p className="text-white text-sm font-light">email@email.com</p>
-            </div>
-            <div className="flex items-center mt-8 space-x-4">
-              <FiMapPin className="text-white text-2xl font-extralight" />
-              <p className="text-white text-sm font-light">Morada</p>
-            </div>
-          </div>
+        <div className="flex flex-col w-full justify-center items-center sm:flex-row sm:space-x-4 mt-10">
+          <InfoContacto />
+          <Formulario />
         </div>
       </div>
     </section>
