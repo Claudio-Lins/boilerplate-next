@@ -17,7 +17,7 @@ export default function LinkOne() {
         </div>
 
         <hr className="border-white" />
-        <div className="flex flex-col w-full sm:flex-row sm:justify-between flex-shrink-0">
+        <div className="flex flex-col w-full sm:flex-row sm:justify-between">
           <BoxDestaque title="Destaque #01" />
           <BoxDestaque title="Destaque #02" />
           <BoxDestaque title="Destaque #03" />

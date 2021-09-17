@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 import Dropdown from "./Dropdown";
-import Link from "next/link";
+// import Link from "next/link";
 import LogoMarca from "./logos/LogoMarca";
 import IconDown from "../navbar/IconDown";
 import IconClose from "./IconClose";
@@ -43,11 +44,24 @@ export default function Navbar() {
           {MenuItems.map((menu, index) => {
             return (
               <div className="header-link group" key={index}>
-                <Link href={menu.link}>
+                <Link
+                  activeClass="active"
+                  to={menu.section}
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                >
                   <a onClick={closeMobileMenu}>
                     <span className="span">{menu.title}</span>
                   </a>
                 </Link>
+                {/* <Link
+                href={menu.link}>
+                  <a onClick={closeMobileMenu}>
+                    <span className="span">{menu.title}</span>
+                  </a>
+                </Link> */}
               </div>
             );
           })}
