@@ -9,7 +9,7 @@ export default function TitlesW(props) {
       ref={element}
       variants={animationLeft}
       animate={controls}
-      transition={{ delay: props.delay, type: "tween" }}
+      transition={{ delay: props.delay, type: "spring" }}
       className="font-bold text-2xl text-white sm:text-4xl mb-2 sm:mb-4 drop-shadow-md"
     >
       <h1>{props.title}</h1>

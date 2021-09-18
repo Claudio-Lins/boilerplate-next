@@ -9,7 +9,7 @@ export default function BoxPrograms(props) {
       ref={element}
       variants={props.variants || animationLeft}
       animate={controls}
-      transition={{ delay: props.delay, type: "tween" }}
+      transition={{ delay: props.delay, type: "spring" }}
       className="flex justify-center items-center w-[300px] sm:w-[200px] h-[110px] bg-pink-400 rounded-[15px] shadow"
     >
       {props.title}
