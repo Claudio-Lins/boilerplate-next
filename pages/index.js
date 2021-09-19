@@ -6,7 +6,7 @@ import LinkThree from "../components/linkThree/LinkThree";
 import LinkTwo from "../components/linkTwo/LinkTwo";
 import Contacto from "../components/contacto/Contacto";
 
-export default function Home() {
+export default function Home( { post }) {
   return (
     <div className="">
       <Head>
@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
 
       <main className="flex flex-col items-center justify-center w-full">
-        <LinkOne />
+        <LinkOne  post={post} />
         <LinkTwo />
         <LinkThree />
         <LinkFour />
@@ -24,4 +24,17 @@ export default function Home() {
       </main>
     </div>
   );
+}
+
+
+export async function getStaticProps() {
+  const res = await fetch("https://cryptic-retreat-90035.herokuapp.com/posts");
+  const post = await res.json();
+
+  return {
+    props: {
+      post,
+    },
+    revalidate: 1,
+  };
 }

@@ -1,10 +1,12 @@
 import { scaleAnimationUp } from "../../utils/Animations";
 import Button from "../assets/Button";
 import Titles from "../assets/Titles";
+import PostCard from "../blog/PostCard";
+import BlogBanner from "../blog/BlogBanner";
 import BoxDestaque from "./BoxDestaque";
 import Busca from "./Busca";
 
-export default function LinkOne() {
+export default function LinkOne({ post }) {
   return (
     <section
       id="linkOne"
@@ -17,12 +19,17 @@ export default function LinkOne() {
         </div>
 
         <hr className="border-white" />
-        <div className="flex flex-col w-full sm:space-x-4 sm:flex-row sm:justify-between">
-          <BoxDestaque title="Destaque #01" />
-          <BoxDestaque title="Destaque #02" />
-          <BoxDestaque title="Destaque #03" />
+        <div className="w-auto sm:flex justify-evenly sm:space-x-4">
+          {post.slice(0, 3).map((post) => (
+            <PostCard key={post.id} post={post} />
+          ))}
         </div>
-        <Button title="Todos" delay={0.4} variants={scaleAnimationUp} />
+        <Button
+          url={"/blog"}
+          title="Todos"
+          delay={0.4}
+          variants={scaleAnimationUp}
+        />
       </div>
     </section>
   );
