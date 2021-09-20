@@ -5,14 +5,14 @@ export default function LinkFour() {
   return (
     <section
       id="linkFour"
-      className="w-full h-auto pt-10 pb-28 px-2 bg-white flex justify-center mx-auto"
+      className="w-full h-auto pt-10 pb-14 px-2 bg-white flex justify-center mx-auto"
     >
       <div className="container w-full mx-auto">
         <div className="w-full">
           <Titles title="Equipa" delay={0.2} />
         </div>
         <hr />
-        <div className="w-full mx-auto sm:flex justify-evenly sm:space-x-4">
+        <div className="w-full mx-auto md:flex justify-evenly md:space-x-4">
           <CardEquipa
             name="André dias"
             cargo="Desing/Web Developer"

@@ -7,9 +7,8 @@ export default function Blog({ post }) {
       <div className="">
         <BlogBanner />
       </div>
-      <section className="w-full px-3 h-auto pt-10 pb-28 bg-[#1A5B47] bg-opacity-10 shadow-sm flex flex-col items-center">
+      <section className="p-4">
         <div className="container w-full mx-auto">
-          <hr className="border-white" />
           <div className="w-auto sm:flex sm:flex-wrap sm:justify-center">
             {post.map((post) => (
               <PostCard key={post.id} post={post} />

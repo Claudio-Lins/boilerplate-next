@@ -13,7 +13,7 @@ export default function Contacto() {
           <Titles title="Contacto" delay={0.2} />
         </div>
         <hr />
-        <div className="flex flex-col w-full justify-center items-center sm:flex-row sm:space-x-4 mt-10">
+        <div className="flex flex-col w-full justify-center items-center lg:flex-row lg:space-x-4 mt-10">
           <InfoContacto />
           <Formulario />
         </div>

@@ -13,7 +13,7 @@ export default function InfoContacto(props) {
       variants={animationLeft}
       animate={controls}
       transition={{ delay: 0.4, type: "tween" }}
-      className="bg-purple-600 w-full p-8 rounded-2xl shadow-md sm:h-[570px] sm:w-[40%] xl:p-16"
+      className="bg-purple-600 w-full p-8 rounded-2xl shadow-md lg:h-[570px] lg:w-[40%] xl:p-16"
     >
       <h2 className="text-center text-white text-2xl sm:text-left">
         Informações de contacto
@@ -33,7 +33,7 @@ export default function InfoContacto(props) {
         <FiMapPin className="text-white text-2xl font-extralight" />
         <p className="text-white text-sm font-light">Morada</p>
       </div>
-      <div className="flex justify-center mt-32 md:mt-48 xl:mt-52">
+      <div className="flex justify-center mt-20 lg:mt-28 xl:mt-40">
         <SocialNetwork />
       </div>
     </motion.div>

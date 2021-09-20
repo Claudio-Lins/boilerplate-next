@@ -11,9 +11,11 @@ export default function Button(props) {
       variants={props.variants || animationLeft}
       animate={controls}
       transition={{ delay: props.delay || 0.2, type: "tween" }}
-      className="bg-green-700 px-4 py-2 text-center text-white rounded-md w-1/4 mx-auto mt-4 shadow-md"
+      className="bg-green-700 px-4 py-2 text-center text-white rounded-md w-1/4 mx-auto mt-4 shadow-md cursor-pointer"
     >
-      <Link href={props.url} passHref>{props.title}</Link>
+      <Link href={props.url} passHref>
+        {props.title}
+      </Link>
     </motion.div>
   );
 }
