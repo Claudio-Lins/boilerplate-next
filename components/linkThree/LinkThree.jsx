@@ -1,4 +1,5 @@
 import Titles from "../assets/Titles";
+import HorariosDesk from "./HorariosDesk";
 import HorariosMob from "./HorariosMob";
 
 export default function LinkThree() {
@@ -13,6 +14,7 @@ export default function LinkThree() {
         </div>
         <hr className="border-white" />
         <HorariosMob />
+        <HorariosDesk />
       </div>
     </section>
   );

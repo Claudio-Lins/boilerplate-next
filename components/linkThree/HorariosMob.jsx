@@ -20,25 +20,25 @@ export default function HorariosMob() {
 
   return (
     <Slide {...properties}>
-      <div className="mt-2 px-2 sm:hidden">
+      <div className="mt-2 px-2 lg:hidden">
         <HorarioSegundaMob />
       </div>
-      <div className="mt-2 px-2 sm:hidden">
+      <div className="mt-2 px-2 lg:hidden">
         <HorarioTercaMob />
       </div>
-      <div className="mt-2 px-2 sm:hidden">
+      <div className="mt-2 px-2 lg:hidden">
         <HorarioQuartaMob />
       </div>
-      <div className="mt-2 px-2 sm:hidden">
+      <div className="mt-2 px-2 lg:hidden">
         <HorarioQuintaMob />
       </div>
-      <div className="mt-2 px-2 sm:hidden">
+      <div className="mt-2 px-2 lg:hidden">
         <HorarioSextaMob />
       </div>
-      <div className="mt-2 px-2 sm:hidden">
+      <div className="mt-2 px-2 lg:hidden">
         <HorarioSabadoMob />
       </div>
-      <div className="mt-2 px-2 sm:hidden">
+      <div className="mt-2 px-2 lg:hidden">
         <HorarioDomingoMob />
       </div>
     </Slide>
