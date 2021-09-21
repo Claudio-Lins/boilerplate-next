@@ -5,6 +5,7 @@ import LinkFour from "../components/linkFour/LinkFour";
 import LinkThree from "../components/linkThree/LinkThree";
 import LinkTwo from "../components/linkTwo/LinkTwo";
 import Contacto from "../components/contacto/Contacto";
+import Navbar from "../components/navbar/Navbar";
 
 export default function Home( { post }) {
   return (
@@ -13,7 +14,7 @@ export default function Home( { post }) {
         <title>BoilerPlate</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Navbar />
       <main className="flex flex-col items-center justify-center w-full">
         <LinkOne  post={post} />
         <LinkTwo />

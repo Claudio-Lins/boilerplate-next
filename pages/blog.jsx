@@ -1,9 +1,11 @@
 import BlogBanner from "../components/blog/BlogBanner";
 import PostCard from "../components/blog/PostCard";
+import NavbarBlog from "../components/navbar/NavbarBlog";
 
 export default function Blog({ post }) {
   return (
     <>
+      <NavbarBlog />
       <div className="">
         <BlogBanner />
       </div>
