@@ -23,6 +23,13 @@
   @apply flex absolute top-[40px] right-4 text-3xl cursor-pointer lg:hidden;
 }
 
+.headerWeek {
+  @apply flex flex-col container xl:min-w-[140px] max-w-xs mx-auto;
+}
+.bottonDay {
+  @apply flex justify-center py-4 mt-2 rounded-b-xl;
+}
+
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
@@ -83,3 +90,6 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
+/* HORARIOS */
+

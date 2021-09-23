@@ -2,7 +2,7 @@ import { Sabado } from "../../data/Horarios";
 
 export default function HorarioSabadoMob(props) {
   return (
-    <div className="flex flex-col lg:min-w-[140px] 2xl:min-w-3xl mt-4">
+    <div className="headerWeek">
       <div className="flex justify-center py-6 bg-black rounded-t-3xl lg:py-3 lg:rounded-t-xl">
         <div className="text-white text-xl font-semibold tracking-wider antialiased lg:text-sm">
           Sábado
@@ -27,7 +27,7 @@ export default function HorarioSabadoMob(props) {
           </div>
         );
       })}
-      <div className="flex justify-center py-1 mt-2 bg-black rounded-b-xl"></div>
+      <div className="bottonDay bg-black"></div>
     </div>
   );
 }

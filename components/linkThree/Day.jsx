@@ -2,7 +2,7 @@ import { Segunda } from "../../data/Horarios";
 
 export default function Day(props) {
   return (
-    <div className="flex flex-col lg:max-w-[140px] 2xl:max-w-3xl mt-4">
+    <div className="flex flex-col lg:min-w-[200px] 2xl:min-w-3xl mt-4">
       <div className="flex justify-center bg-red-800 py-3 rounded-t-xl">
         <div className="text-white text-sm font-semibold tracking-wider antialiased">
           Segunda-feira
