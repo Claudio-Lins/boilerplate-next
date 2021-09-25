@@ -8,7 +8,7 @@ export default function Day(props) {
           Segunda-feira
         </div>
       </div>
-      {Segunda.map((segunda, id) => {
+      {Segunda.map((segunda) => {
         return (
           <div key={segunda.id}>
             <div className="mt-2 text-center bg-gray-50 flex justify-center rounded-xl shadow-md p-2">

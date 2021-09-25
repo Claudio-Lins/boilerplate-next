@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { fetchAPIRedeDois, fetchAPISintonizat } from "../lib/api";
 import LinkOne from "../components/linkOne/LinkOne";
 import LinkFive from "../components/linkFive/LinkFive";
 import LinkFour from "../components/linkFour/LinkFour";
@@ -7,7 +8,7 @@ import LinkTwo from "../components/linkTwo/LinkTwo";
 import Contacto from "../components/contacto/Contacto";
 import Navbar from "../components/navbar/Navbar";
 
-export default function Home( { post }) {
+export default function Home({ posts, schedules }) {
   return (
     <div className="">
       <Head>
@@ -16,26 +17,38 @@ export default function Home( { post }) {
       </Head>
       <Navbar />
       <main className="flex flex-col items-center justify-center w-full">
-        <LinkOne  post={post} />
+        <LinkOne posts={posts} />
         <LinkTwo />
         <LinkThree />
         <LinkFour />
         <LinkFive />
         <Contacto />
       </main>
+      {console.log(schedules[0].title)}
     </div>
   );
 }
 
-
 export async function getStaticProps() {
-  const res = await fetch("https://cryptic-retreat-90035.herokuapp.com/posts");
-  const post = await res.json();
+  const [posts, schedules] = await Promise.all([
+    fetchAPIRedeDois("/posts"),
+    fetchAPISintonizat("/schedule"),
+  ]);
 
   return {
-    props: {
-      post,
-    },
+    props: { posts, schedules },
     revalidate: 1,
   };
 }
+
+// export async function getStaticProps() {
+//   const res = await fetch("https://cryptic-retreat-90035.herokuapp.com/posts");
+//   const post = await res.json();
+
+//   return {
+//     props: {
+//       post,
+//     },
+//     revalidate: 1,
+//   };
+// }
