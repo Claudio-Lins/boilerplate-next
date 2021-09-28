@@ -8,7 +8,7 @@ export default function TesteStrapi({ schedule }) {
             return (
               <div key={schedule.id}>
                 <div className="w-[200px] mt-4">
-                  <div className="flex justify-center bg-green-800 py-3 rounded-t-xl">
+                  <div className="quarta">
                     <div className="flex text-white text-sm text-center font-semibold tracking-wider antialiased">
                       {new Date(schedule.day).getDay() === 1
                         ? "Segunda-feira"
@@ -65,7 +65,7 @@ export default function TesteStrapi({ schedule }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:1337/schedules");
+  const res = await fetch("https://boilerplate-api-mongo.herokuapp.com/schedules");
   const schedule = await res.json();
 
   return {
