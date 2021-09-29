@@ -6,7 +6,10 @@ import BlogBanner from "../blog/BlogBanner";
 import BoxDestaque from "./BoxDestaque";
 import Busca from "./Busca";
 
-export default function LinkOne({ posts }) {
+export default function LinkOne({ articles }) {
+
+ 
+
   return (
     <section
       id="linkOne"
@@ -21,8 +24,8 @@ export default function LinkOne({ posts }) {
 
         <hr className="border-white" />
         <div className="w-auto lg:flex justify-evenly lg:space-x-4">
-          {posts.slice(0, 3).map((posts) => (
-            <PostCard key={posts.id} posts={posts} />
+          {articles.slice(0, 3).map((articles) => (
+            <PostCard key={articles.id} articles={articles} />
           ))}
         </div>
         <Button

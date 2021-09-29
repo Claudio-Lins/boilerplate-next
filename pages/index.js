@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { fetchAPIRedeDois, fetchAPISintonizat } from "../lib/api";
+import { fetchAPIBoilerplate, fetchAPISintonizat } from "../lib/api";
 import LinkOne from "../components/linkOne/LinkOne";
 import LinkFive from "../components/linkFive/LinkFive";
 import LinkFour from "../components/linkFour/LinkFour";
@@ -8,7 +8,7 @@ import LinkTwo from "../components/linkTwo/LinkTwo";
 import Contacto from "../components/contacto/Contacto";
 import Navbar from "../components/navbar/Navbar";
 
-export default function Home({ posts, schedules }) {
+export default function Home({ articles, schedules }) {
   return (
     <div className="">
       <Head>
@@ -17,7 +17,7 @@ export default function Home({ posts, schedules }) {
       </Head>
       <Navbar />
       <main className="flex flex-col items-center justify-center w-full">
-        <LinkOne posts={posts} />
+        <LinkOne articles={articles} />
         <LinkTwo />
         <LinkThree />
         <LinkFour />
@@ -29,13 +29,13 @@ export default function Home({ posts, schedules }) {
 }
 
 export async function getStaticProps() {
-  const [posts, schedules] = await Promise.all([
-    fetchAPIRedeDois("/posts"),
+  const [articles, schedules] = await Promise.all([
+    fetchAPIBoilerplate("/articles"),
     fetchAPISintonizat("/schedule"),
   ]);
 
   return {
-    props: { posts, schedules },
+    props: { articles, schedules },
     revalidate: 1,
   };
 }

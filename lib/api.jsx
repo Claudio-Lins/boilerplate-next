@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////////////////////////////////
 
-export function getURLAPIRede(path = "") {
+export function getURLAPIBoilerplate(path = "") {
   return `${
-    process.env.API_URL_API || "https://strapi-redesf.herokuapp.com/"
+    process.env.API_URL_APIBOILERPLATE || "https://boilerplate-api-mongo.herokuapp.com"
   }${path}`;
 }
-export async function fetchAPIRede(path) {
-  const requestUrl = getURLAPIRede(path);
+export async function fetchAPIBoilerplate(path) {
+  const requestUrl = getURLAPIBoilerplate(path);
   const response = await fetch(requestUrl);
   const data = await response.json();
   return data;
