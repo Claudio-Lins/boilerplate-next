@@ -33,13 +33,25 @@
 /* Schedule */
 
 .segunda {
-  @apply flex justify-center bg-green-800 py-3 rounded-t-xl;
+  @apply flex justify-center py-3 rounded-t-xl bg-green-800;
 }
 .terca {
-  @apply flex justify-center bg-red-800 py-3 rounded-t-xl;
+  @apply flex justify-center py-3 rounded-t-xl bg-red-800;
 }
 .quarta {
-  @apply flex justify-center bg-blue-800 py-3 rounded-t-xl;
+  @apply flex justify-center py-3 rounded-t-xl bg-blue-800;
+}
+.quinta {
+  @apply flex justify-center py-3 rounded-t-xl bg-purple-800;
+}
+.sexta {
+  @apply flex justify-center py-3 rounded-t-xl bg-pink-600;
+}
+.sabado {
+  @apply flex justify-center py-3 rounded-t-xl bg-yellow-600;
+}
+.domingo {
+  @apply flex justify-center py-3 rounded-t-xl bg-gray-800;
 }
 
 @tailwind utilities;

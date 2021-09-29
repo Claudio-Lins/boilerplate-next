@@ -8,7 +8,15 @@ export default function TesteStrapi({ schedule }) {
             return (
               <div key={schedule.id}>
                 <div className="w-[200px] mt-4">
-                  <div className="quarta">
+                  <div className={
+                    new Date(schedule.day).getDay() === 1 ? 'segunda' : '' ||
+                    new Date(schedule.day).getDay() === 2 ? 'terca' : '' ||
+                    new Date(schedule.day).getDay() === 3 ? 'quarta' : '' ||
+                    new Date(schedule.day).getDay() === 4 ? 'quinta' : '' ||
+                    new Date(schedule.day).getDay() === 5 ? 'sexta' : '' ||
+                    new Date(schedule.day).getDay() === 6 ? 'sabado' : '' ||
+                    new Date(schedule.day).getDay() === 0 ? 'domingo' : '' 
+                  }>
                     <div className="flex text-white text-sm text-center font-semibold tracking-wider antialiased">
                       {new Date(schedule.day).getDay() === 1
                         ? "Segunda-feira"
@@ -29,7 +37,6 @@ export default function TesteStrapi({ schedule }) {
                       {new Date(schedule.day).getDay() === 0 ? "Domingo" : ""}
 
                       {/* {console.log(new Date(schedule.day).getDay())} */}
-                      {console.log(schedule.day)}
                     </div>
                   </div>
                   {schedule.programacao.map((programacao) => {
@@ -65,7 +72,9 @@ export default function TesteStrapi({ schedule }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("https://boilerplate-api-mongo.herokuapp.com/schedules");
+  const res = await fetch(
+    "https://boilerplate-api-mongo.herokuapp.com/schedules"
+  );
   const schedule = await res.json();
 
   return {
