@@ -2,7 +2,7 @@ import BlogBanner from "../components/blog/BlogBanner";
 import PostCard from "../components/blog/PostCard";
 import NavbarBlog from "../components/navbar/NavbarBlog";
 
-export default function Blog({ post }) {
+export default function Blog({ posts }) {
   return (
     <>
       <NavbarBlog />
@@ -12,9 +12,10 @@ export default function Blog({ post }) {
       <section className="p-4">
         <div className="container w-full mx-auto">
           <div className="w-auto sm:flex sm:flex-wrap sm:justify-center">
-            {post.map((post) => (
-              <PostCard key={post.id} post={post} />
+            {posts.map((posts) => (
+              <PostCard key={posts.id} posts={posts} />
             ))}
+            
           </div>
         </div>
       </section>
@@ -24,11 +25,11 @@ export default function Blog({ post }) {
 
 export async function getStaticProps() {
   const res = await fetch("https://cryptic-retreat-90035.herokuapp.com/posts");
-  const post = await res.json();
+  const posts = await res.json();
 
   return {
     props: {
-      post,
+      posts,
     },
     revalidate: 1,
   };

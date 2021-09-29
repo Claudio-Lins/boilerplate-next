@@ -24,7 +24,6 @@ export default function Home({ posts, schedules }) {
         <LinkFive />
         <Contacto />
       </main>
-      {console.log(schedules[0].title)}
     </div>
   );
 }
