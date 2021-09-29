@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ReactMarkdown from "react-markdown";
 import Head from "next/head";
 import Link from "next/link";
 
@@ -30,8 +31,8 @@ export default function PostCard({ articles }) {
           <div className="text-gray-600 font-semibold text-lg mb-2 mx-3 mt-2 leading-snug">
             <h2>{articles.title || "Sem título"}</h2>
           </div>
-          <div className="text-gray-600 font-light text-sm mb-2 mx-3 antialiased">
-            {articles.content.slice(0, 200) + " ..."}
+          <div className="text-gray-600 font-light text-sm mb-2 mx-3 antialiased prose">
+            <ReactMarkdown>{articles.content.slice(0, 200) + " ..."}</ReactMarkdown>
           </div>
 
           <div className="flex justify-between w-full border-t border-gray-100">

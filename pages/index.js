@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { fetchAPIBoilerplate, fetchAPISintonizat } from "../lib/api";
+import { fetchAPIBoilerplate } from "../lib/api";
 import LinkOne from "../components/linkOne/LinkOne";
 import LinkFive from "../components/linkFive/LinkFive";
 import LinkFour from "../components/linkFour/LinkFour";
@@ -8,7 +8,7 @@ import LinkTwo from "../components/linkTwo/LinkTwo";
 import Contacto from "../components/contacto/Contacto";
 import Navbar from "../components/navbar/Navbar";
 
-export default function Home({ articles, schedules }) {
+export default function Home({ articles }) {
   return (
     <div className="">
       <Head>
@@ -29,13 +29,12 @@ export default function Home({ articles, schedules }) {
 }
 
 export async function getStaticProps() {
-  const [articles, schedules] = await Promise.all([
-    fetchAPIBoilerplate("/articles"),
-    fetchAPISintonizat("/schedule"),
+  const [articles] = await Promise.all([
+    fetchAPIBoilerplate("/articles")
   ]);
 
   return {
-    props: { articles, schedules },
+    props: { articles },
     revalidate: 1,
   };
 }
