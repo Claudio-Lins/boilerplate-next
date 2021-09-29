@@ -7,9 +7,6 @@ import BoxDestaque from "./BoxDestaque";
 import Busca from "./Busca";
 
 export default function LinkOne({ articles }) {
-
- 
-
   return (
     <section
       id="linkOne"
@@ -24,9 +21,13 @@ export default function LinkOne({ articles }) {
 
         <hr className="border-white" />
         <div className="w-auto lg:flex justify-evenly lg:space-x-4">
-          {articles.slice(0, 3).map((articles) => (
-            <PostCard key={articles.id} articles={articles} />
-          ))}
+          {articles &&
+            articles
+              .sort((a, b) => a.published_at - b.published_at)
+              .slice(0, 3)
+              .map((articles) => (
+                <PostCard key={articles.id} articles={articles} />
+              ))}
         </div>
         <Button
           url={"/blog"}

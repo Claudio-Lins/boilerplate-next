@@ -13,6 +13,7 @@ export default function PostCard({ articles }) {
     <>
       <div className="flex flex-col w-full mt-10 bg-white shadow-lg border rounded-lg overflow-hidden p-4">
         <div className="">
+        
           <div className="">
             <Image
               src={articles.image.url || "/assets/picture.svg"}
