@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Dropdown from "./Dropdown";
 import Link from "next/link";
 import LogoMarca from "./logos/LogoMarca";
-import IconDown from "./IconDown";
 import IconClose from "./IconClose";
 import IconBars from "./IconBars";
 import { MenuItems } from "./MenuItems";
