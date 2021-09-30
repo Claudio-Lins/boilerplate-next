@@ -2,8 +2,6 @@ import { scaleAnimationUp } from "../../utils/Animations";
 import Button from "../assets/Button";
 import Titles from "../assets/Titles";
 import PostCard from "../blog/PostCard";
-import BlogBanner from "../blog/BlogBanner";
-import BoxDestaque from "./BoxDestaque";
 import Busca from "./Busca";
 
 export default function LinkOne({ articles }) {

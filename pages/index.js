@@ -8,15 +8,15 @@ import Contacto from "../components/contacto/Contacto";
 import Navbar from "../components/navbar/Navbar";
 import Page from "../components/page";
 
-export default function Home({ articles }) {
+export default function Home({ articles, schedule, programas }) {
   return (
     <Page title="BoilerPlate - Claudio Lins" path='/' description="Boilerplate">
       <div className="">
         <Navbar />
         <main className="flex flex-col items-center justify-center w-full">
           <LinkOne articles={articles} />
-          <LinkTwo />
-          <LinkThree />
+          <LinkTwo programas={programas} />
+          <LinkThree schedule={schedule} />
           <LinkFour />
           <LinkFive />
           <Contacto />
@@ -27,10 +27,15 @@ export default function Home({ articles }) {
 }
 
 export async function getStaticProps() {
-  const [articles] = await Promise.all([fetchAPIBoilerplate("/articles")]);
+  const [articles, schedule, programas] = await Promise.all([
+    fetchAPIBoilerplate("/articles"),
+    fetchAPIBoilerplate("/schedules"),
+    fetchAPIBoilerplate("/programas")
+  ]
+    );
 
   return {
-    props: { articles },
+    props: { articles, schedule, programas },
     revalidate: 1,
   };
 }

@@ -1,14 +1,15 @@
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-import HorarioDomingoMob from "./HorarioDomingoMob";
-import HorarioQuartaMob from "./HorarioQuartaMob";
-import HorarioQuintaMob from "./HorarioQuintaMob";
-import HorarioSabadoMob from "./HorarioSabadoMob";
-import HorarioSegundaMob from "./HorarioSegundaMob";
-import HorarioSextaMob from "./HorarioSextaMob";
-import HorarioTercaMob from "./HorarioTercaMob";
 
-export default function HorariosMob() {
+import SegundaMob from "./SegundaMob";
+import TercaMob from "./TercaMob";
+import QuartaMob from "./QuartaMob";
+import QuintaMob from "./QuintaMob";
+import SextaMob from "./SextaMob";
+import SabadoMob from "./SabadoMob";
+import DomingoMob from "./DomingoMob";
+
+export default function HorariosMob({ schedule}) {
   const properties = {
     duration: 50000,
     transitionDuration: 400,
@@ -20,27 +21,28 @@ export default function HorariosMob() {
 
   return (
     <Slide {...properties}>
-      <div className="mt-2 px-2 lg:hidden">
-        <HorarioSegundaMob />
+      <div className="mt-2 px-2">
+        <SegundaMob schedule={schedule} />
       </div>
-      <div className="mt-2 px-2 lg:hidden">
-        <HorarioTercaMob />
+      <div className="mt-2 px-2">
+        <TercaMob schedule={schedule} />
       </div>
-      <div className="mt-2 px-2 lg:hidden">
-        <HorarioQuartaMob />
+      <div className="mt-2 px-2">
+        <QuartaMob schedule={schedule} />
       </div>
-      <div className="mt-2 px-2 lg:hidden">
-        <HorarioQuintaMob />
+      <div className="mt-2 px-2">
+        <QuintaMob schedule={schedule} />
       </div>
-      <div className="mt-2 px-2 lg:hidden">
-        <HorarioSextaMob />
+      <div className="mt-2 px-2">
+        <SextaMob schedule={schedule} />
       </div>
-      <div className="mt-2 px-2 lg:hidden">
-        <HorarioSabadoMob />
+      <div className="mt-2 px-2">
+        <SabadoMob schedule={schedule} />
       </div>
-      <div className="mt-2 px-2 lg:hidden">
-        <HorarioDomingoMob />
+      <div className="mt-2 px-2">
+        <DomingoMob schedule={schedule} />
       </div>
+      
     </Slide>
   );
 }
