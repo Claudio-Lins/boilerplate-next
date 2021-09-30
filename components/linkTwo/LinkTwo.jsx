@@ -6,7 +6,7 @@ export default function LinkTwo({ programas }) {
   return (
     <section
       id="linkTwo"
-      className="w-full px-3 h-auto pt-10 pb-14 bg-white flex justify-center"
+      className="w-full px-3 h-auto py-10 bg-[#1A5B47] bg-opacity-10 shadow-sm"
     >
       <div className="container mx-auto">
         <div className="w-full">
