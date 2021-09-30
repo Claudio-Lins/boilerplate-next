@@ -1,12 +1,12 @@
 import { fetchAPIBoilerplate } from "../lib/api";
-
 import BlogBanner from "../components/blog/BlogBanner";
 import PostCard from "../components/blog/PostCard";
 import NavbarBlog from "../components/navbar/NavbarBlog";
+import Page from "../components/page";
 
 export default function Blog({ articles }) {
   return (
-    <>
+    <Page title="Blog Boilerplate" description="Blog page - Boilerplate" path='/blog'>
       <NavbarBlog />
       <div className="">
         <BlogBanner />
@@ -17,18 +17,15 @@ export default function Blog({ articles }) {
             {articles.map((articles) => (
               <PostCard key={articles.id} articles={articles} />
             ))}
-            
           </div>
         </div>
       </section>
-    </>
+    </Page>
   );
 }
 
 export async function getStaticProps() {
-  const [articles] = await Promise.all([
-    fetchAPIBoilerplate("/articles")
-  ]);
+  const [articles] = await Promise.all([fetchAPIBoilerplate("/articles")]);
 
   return {
     props: { articles },
