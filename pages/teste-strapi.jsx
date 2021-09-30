@@ -47,7 +47,7 @@ export default function TesteStrapi({ schedule }) {
                       >
                         <div className="flex flex-col space-y-1">
                           <div className="text-[10px] font-bold tracking-wider text-red-600">
-                            {programacao.hour.slice(0, 5)}
+                            {programacao.hourStart.slice(0, 5)}
                           </div>
                           <hr className=" border-red-200 my-1" />
                           <div className="text-[10px] font-light tracking-wider text-red-600">
