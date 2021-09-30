@@ -3,9 +3,9 @@ export default function SextaMob({ schedule }) {
     <div className=" container mx-auto flex justify-evenly my-2">
       <div className="lg:hidden w-full xs:w-[320px] mt-4">
         <div className="sexta flex text-white text-sm text-center font-semibold tracking-wider antialiased">
-          Sexta-feira
+        {schedule[4].label}
         </div>
-        {schedule[5].programacao.map((programacao) => {
+        {schedule[4].programacao.map((programacao) => {
           return (
             <div
               key={programacao.id}

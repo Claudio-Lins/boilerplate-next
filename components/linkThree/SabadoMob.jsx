@@ -3,9 +3,9 @@ export default function SabadoMob({ schedule }) {
     <div className=" container mx-auto flex justify-evenly my-2">
       <div className="lg:hidden w-full xs:w-[320px] mt-4">
         <div className="sabado flex text-white text-sm text-center font-semibold tracking-wider antialiased">
-          Sábado
+        {schedule[5].label}
         </div>
-        {schedule[6].programacao.map((programacao) => {
+        {schedule[5].programacao.map((programacao) => {
           return (
             <div
               key={programacao.id}

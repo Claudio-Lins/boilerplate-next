@@ -3,9 +3,9 @@ export default function QuartaMob({ schedule }) {
     <div className=" container mx-auto flex justify-evenly my-2">
       <div className="lg:hidden w-full xs:w-[320px] mt-4">
           <div className="quarta flex text-white text-sm text-center font-semibold tracking-wider antialiased">
-            Quarta-feira
+          {schedule[2].label}
           </div>
-        {schedule[3].programacao.map((programacao) => {
+        {schedule[2].programacao.map((programacao) => {
           return (
             <div
               key={programacao.id}

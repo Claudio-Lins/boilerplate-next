@@ -3,9 +3,9 @@ export default function QuintaMob({ schedule }) {
     <div className=" container mx-auto flex justify-evenly my-2">
       <div className="lg:hidden w-full xs:w-[320px] mt-4">
           <div className="quinta flex text-white text-sm text-center font-semibold tracking-wider antialiased">
-            Quinta-feira
+          {schedule[3].label}
           </div>
-        {schedule[4].programacao.map((programacao) => {
+        {schedule[3].programacao.map((programacao) => {
           return (
             <div
               key={programacao.id}

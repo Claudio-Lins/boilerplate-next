@@ -2,10 +2,10 @@ export default function DomingoMob({ schedule }) {
   return (
     <div className=" container mx-auto flex justify-evenly my-2">
       <div className="lg:hidden w-full xs:w-[320px] mt-4">
-          <div className="domingo flex text-white text-sm text-center font-semibold tracking-wider antialiased">
-            Domingo
-          </div>
-        {schedule[0].programacao.map((programacao) => {
+        <div className="domingo flex text-white text-sm text-center font-semibold tracking-wider antialiased">
+          {schedule[6].label}
+        </div>
+        {schedule[6].programacao.map((programacao) => {
           return (
             <div
               key={programacao.id}
@@ -13,7 +13,8 @@ export default function DomingoMob({ schedule }) {
             >
               <div className="flex flex-col space-y-1">
                 <div className="flex mx-auto text-[10px] font-bold tracking-wider text-red-600">
-                {programacao.hourStart.slice(0, 5)} - {programacao.hourEnd.slice(0, 5)}
+                  {programacao.hourStart.slice(0, 5)} -{" "}
+                  {programacao.hourEnd.slice(0, 5)}
                 </div>
                 <hr className=" border-red-200 my-1" />
                 <div className="text-[10px] font-light tracking-wider text-red-600">

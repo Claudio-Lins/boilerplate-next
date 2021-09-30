@@ -5,7 +5,7 @@ export default function SegundaMob({ schedule }) {
           <div className="segunda flex text-white text-sm text-center font-semibold tracking-wider antialiased">
             {schedule[0].label}
           </div>
-        {schedule[1].programacao.map((programacao) => {
+        {schedule[0].programacao.map((programacao) => {
           return (
             <div
               key={programacao.id}

@@ -4,6 +4,7 @@ import HorariosMob from "./HorariosMob";
 import Schedule from "./schedule/Schedule";
 
 export default function LinkThree({ schedule }) {
+  console.log(schedule)
   return (
     <section
       id="linkThree"

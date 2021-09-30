@@ -3,9 +3,9 @@ export default function TercaMob({ schedule }) {
     <div className=" container mx-auto flex justify-evenly my-2">
       <div className="lg:hidden w-full xs:w-[320px] mt-4">
           <div className="terca flex text-white text-sm text-center font-semibold tracking-wider antialiased">
-            Terça-feira
+          {schedule[1].label}
           </div>
-        {schedule[2].programacao.map((programacao) => {
+        {schedule[1].programacao.map((programacao) => {
           return (
             <div
               key={programacao.id}
