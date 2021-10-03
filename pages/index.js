@@ -8,7 +8,7 @@ import Contacto from "../components/contacto/Contacto";
 import Navbar from "../components/navbar/Navbar";
 import Page from "../components/page";
 
-export default function Home({ articles, schedule, programas }) {
+export default function Home({ articles, schedule, programas, team }) {
   return (
     <Page title="BoilerPlate - Claudio Lins" path='/' description="Boilerplate">
       <div className="">
@@ -17,7 +17,7 @@ export default function Home({ articles, schedule, programas }) {
           <LinkOne articles={articles} />
           <LinkTwo programas={programas} />
           <LinkThree schedule={schedule} />
-          <LinkFour />
+          <LinkFour team={team} />
           <LinkFive />
           <Contacto />
         </main>
@@ -27,15 +27,16 @@ export default function Home({ articles, schedule, programas }) {
 }
 
 export async function getStaticProps() {
-  const [articles, schedule, programas] = await Promise.all([
+  const [articles, schedule, programas, team] = await Promise.all([
     fetchAPIBoilerplate("/articles"),
     fetchAPIBoilerplate("/schedules"),
-    fetchAPIBoilerplate("/programas")
+    fetchAPIBoilerplate("/programas"),
+    fetchAPIBoilerplate("/teams")
   ]
     );
 
   return {
-    props: { articles, schedule, programas },
+    props: { articles, schedule, programas, team },
     revalidate: 1,
   };
 }
